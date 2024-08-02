@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+    <title>whatsapp link generate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+</head>
+<script src="https://kit.fontawesome.com/021eda8db5.js" crossorigin="anonymous"></script>
+<header>
+  <div class="logo">iNantwm</div>
+  
+ 
+    
+  </header>
+<body>
+  
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="home.html" class="active">Home</a>
+  <a href="index.html">About</a>
+  <a href="contact.html">Konversi</a>
+  <a href="word.html">Wa Generator</a>
+</div>
+
+
+
+    <main>
+      
+<div class="pInr">
+<div class="pEnt" id="postID-2285395282861264055">
+<div class="pS post-body postBody" id="postBody"><style>
+.form-group {margin-bottom:8px;color#fff;}
+.form-group label {margin-bottom:8px;display:inline-block;color:#fff}
+.form-control {display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;margin:0;padding:0}
+textarea.form-control {height:auto;}
+.form-text{display:block;margin-top:.25rem;color:#fff}
+.btn {display:inline-flex;align-items:center;margin:15px 15px 15px 0;padding:10px 20px;outline:0;border:0;border-radius:2px;color:#fefefe;background-color:var(--link-bgColor);font-size:14px;font-family:var(--font-body);white-space:nowrap;overflow:hidden;max-width:100%}
+.btn-primary:hover {color: #fff;background-color:#0069d9;border-color:#0062cc;border-radius:50px}
+.btn-primary {color: #fff;background-color: #005af0;border-color: #0069d9;cursor: pointer;margin-top:5px;border-radius:50px}
+</style>
+
+
+<div class="col-md-12">
+<form class="form-horizontal" role="form" id="generate-whatsapp" method="GET">
+<div class="form-group">
+<label for="phone" class="col-md-4 control-label">Nomor telepon dengan kode negara (ex. 62)</label>
+<div class="col-sm-5">
+<input id="phone" class="form-control" name="phone" value="" type="text" required="">
+</div>
+</div>
+
+<div class="form-group">
+<label for="phone" class="col-md-4 control-label">Teks Pesan</label>
+<textarea id="text" class="form-control" required=""></textarea>
+</div>
+</div>
+
+
+<div class="form-group hide">
+<label for="link" class="col-md-4 control-label">Link (Optional)</label>
+<div class="col-sm-5">
+<input id="link" class="form-control" name="text" value="" type="text">
+</div>
+</div>
+
+<p class='desC'></p></div>
+
+<div class="form-group hide result-view">
+<label for="result" class="col-md-4 control-label">Hasil (Click to copy)</label>
+<div class="col-sm-5">
+<textarea id="result" class="form-control" name="text"></textarea>
+</div>
+</div>
+
+<div class="form-group">
+<div class="col-md-6">
+<button type="submit" class="btn btn-primary">Generate</button>
+</div>
+</div>
+</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#generate-whatsapp").submit(function(e){
+e.preventDefault();
+
+var $result = $("#result");
+var $phone = $("#phone").val();
+var $text = $("#text").val();
+var $link = $("#link").val();
+
+var waURL = "https://api.whatsapp.com/send?";
+var phone = "&phone=" + $phone;
+var text = "&text=" + $text;
+var link = "";
+if($link.length > 0){
+link = "&link=" + $link;
+}
+
+var finalResult = waURL + phone + text + link;
+
+$result.val(finalResult)
+$('.result-view').removeClass("hide");
+});
+
+$("#result").on("click", function(){
+copyToClipboard("result");
+
+alert("Success copy");
+});
+
+function copyToClipboard(elementId) {
+// Create a "hidden" input
+var aux = document.createElement("input");
+
+
+// Assign it the value of the specified element
+aux.setAttribute("value", $("#" + elementId).val());
+
+
+// Append it to the body
+document.body.appendChild(aux);
+
+
+// Highlight its content
+aux.select();
+
+
+// Copy the highlighted text
+document.execCommand("copy");
+
+
+// Remove it from the body
+document.body.removeChild(aux);
+
+
+}
+});
+</script></div>
+</div>
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "BlogPosting",
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "https://www.inputekno.com/p/whatsapp-generator.html"
+},
+"headline": "WhatsApp Chat Link Generator",
+"description": "Phone use country code (ex. 62) Text Message Link (Optional) Result (Click to copy) Generate",
+"articleBody": "Phone use country code (ex. 62) Text Message Link (Optional) Result (Click to copy) Generate",
+"datePublished": "2020-09-24T20:26:00+07:00",
+"dateModified": "2021-09-12T16:20:59+07:00",
+
+"image": {
+"@type": "ImageObject",
+"url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1_kMTjjj4Sbp80YLBjtNKtTdEnq2jn4uULuSrp5Tqyb0RDx__T_KNPZFjxH0PaCLpVf4vt0cXv8L3So51GNy0Lg4QM2xl1Uz_YhQ8z-3zY5KeOsyVNAf_w_e8O-5YlUdzQrvFcri4sh0/s1600/Inputekno-banner.png",
+"height": 348,
+"width": 1200
+},
+
+"publisher": {
+"@type": "Organization",
+"name": "InpuTekno",
+"logo": {
+"@type": "ImageObject",
+"url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC49PjtO_uhGc1kBbHjn-MkyMWFMS3eUf5_eAfkMpfkKlVIuU4AF0QPTQVIjF3zgW9OV7S-NcDd_ZHm16CQbRKmxn0BxI5rO2_mYu2Hyv96q7oWw7jmGB9nksgyNMTxrLriqLxEYM2ONI/",
+"width": 297,
+"height": 45
+}
+},
+
+"author": {
+"@type": "Person",
+"name": "Muhamad Sahrudin",
+"url": "https://www.blogger.com/profile/17474781374411105225",
+"image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzDnr-6P5yqLD4tcNw1nf9O24eQghT7PSP-Mkojf5yrrAM94mSIvI45q0KsfDGlio9Fe9UPPbfq1k5JgzAMOXsfZ54Ov5cY8WitNAnTexTbnQAPZf1puckB9zv58v7mv9SWwZvk9l3RvY/s113-pf/myAvatar.png"
+}
+}
+  </script></div>
+
+    </main>
+    <footer>
+       <p class=footertext>&copy; 2024 Bismillah dulu, baru eksekusi</p>
+    </footer>
+<button onclick="topFunction()" id="back-to-top-btn" title="Go to top"><i class="fa-solid fa-caret-up"></i></button>
+</body>
+</html>
